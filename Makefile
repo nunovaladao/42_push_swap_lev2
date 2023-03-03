@@ -6,7 +6,7 @@
 #    By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/27 17:52:53 by nsoares-          #+#    #+#              #
-#    Updated: 2023/02/27 18:28:29 by nsoares-         ###   ########.fr        #
+#    Updated: 2023/03/03 18:29:15 by nsoares-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ LIBFT = ./libft/libft.a
 
 # _________SOURCES____________
 
-SOURCE_FILES = push_swap.c 
+SOURCE_FILES = push_swap.c \
+				check_arg_errors.c 
 
 OBJS_FILES = $(SOURCE_FILES:.c=.o)
 

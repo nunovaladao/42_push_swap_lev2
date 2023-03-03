@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:44:27 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/02/28 16:13:26 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/03 18:33:04 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 
 # include "libft/libft.h"
 # include <limits.h>
+# include <stdio.h>
 
-typedef struct b_list
+typedef struct s_stack
 {
     int value;
-    struct b_list *next;
-} t_list;
+    struct s_stack *next;
+}   t_stack;
+
+int check_args(int ac, char **av);
 
 # endif

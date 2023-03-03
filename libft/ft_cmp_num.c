@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_cmp_num.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/27 17:43:40 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/03 19:00:38 by nsoares-         ###   ########.fr       */
+/*   Created: 2023/03/03 16:53:36 by nsoares-          #+#    #+#             */
+/*   Updated: 2023/03/03 17:09:56 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int main(int ac, char **av)
+int ft_cmp_num(int n1, int n2)
 {
-    t_stack *a;
-
-    
-    
-
-    return (0);
+    if (n1 < n2)
+        return (1);
+    else if (n2 < n1)
+        return (-1);
+    else
+        return (0);    
 }

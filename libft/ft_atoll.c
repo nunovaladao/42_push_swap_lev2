@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/27 17:43:40 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/03 19:00:38 by nsoares-         ###   ########.fr       */
+/*   Created: 2023/03/03 15:22:45 by nsoares-          #+#    #+#             */
+/*   Updated: 2023/03/03 17:04:16 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int main(int ac, char **av)
+long long	ft_atoll(char *nptr)
 {
-    t_stack *a;
+	long long	s;
+	long long	res;
+	int	i;
 
-    
-    
-
-    return (0);
+	i = 0;
+	res = 0;
+	s = 1;
+	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
+		++i;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			s *= -1;
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		res = res * 10 + (nptr[i] - '0');
+		i++;
+	}
+	return (res * s);
 }
