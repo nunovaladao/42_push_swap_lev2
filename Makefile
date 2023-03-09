@@ -6,7 +6,7 @@
 #    By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/27 17:52:53 by nsoares-          #+#    #+#              #
-#    Updated: 2023/03/03 18:29:15 by nsoares-         ###   ########.fr        #
+#    Updated: 2023/03/09 20:35:51 by nsoares-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,10 @@ LIBFT = ./libft/libft.a
 # _________SOURCES____________
 
 SOURCE_FILES = push_swap.c \
-				check_arg_errors.c 
+				check_arg_errors.c \
+				ft_utils_lists.c \
+				init_int_list.c \
+				sort_list_int.c 
 
 OBJS_FILES = $(SOURCE_FILES:.c=.o)
 
@@ -35,7 +38,7 @@ NO_COLOR	=	\033[0m
 
 COMPILATION_START	=	echo "\n$(BOLD_YELLOW)Make: $(NO_COLOR)Compilation start...\n"
 
-PUSH_READY  =   echo "\n$(BOLD_YELLOW)Push ready ✅ \n"
+PUSH_READY  =   echo "\n$(BOLD_YELLOW)push_swap ready! ✅ \n"
 
 CLEANED		=	echo "\n$(BOLD_YELLOW)Clean: $(NO_COLOR)Removed all the \".o\" files \n"
 

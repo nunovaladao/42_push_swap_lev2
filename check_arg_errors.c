@@ -6,13 +6,13 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 13:47:56 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/03 18:28:06 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/08 15:42:43 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int all_args_are_numbers(int ac, char **av)
+static int  all_args_are_numbers(int ac, char **av)
 {
     int i;
     int j;
@@ -21,7 +21,7 @@ static int all_args_are_numbers(int ac, char **av)
     while (i < ac)
     {
         j = 0;
-        if (av[i][j] == '-' || av[i][j] == '+')
+        if (av[i][j] == '-')
             j++;
         while (av[i][j] != '\0')
         {
