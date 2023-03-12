@@ -6,13 +6,13 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 18:42:11 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/09 21:24:20 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/10 19:39:18 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void init_stack(t_stack **head, int number)
+void init_stack(t_stack **stack, int number)
 {
     t_stack *new = malloc(sizeof(t_stack));
     if (new == NULL)
@@ -20,13 +20,13 @@ void init_stack(t_stack **head, int number)
     new->value = number;
     new->next = NULL;
     
-    if (*head == NULL)
+    if (*stack == NULL)
     {
-        *head = new;
+        *stack = new;
         return;
     }
     
-    t_stack *curr = *head;
+    t_stack *curr = *stack;
     while (curr->next != NULL)
         curr = curr->next;
     curr->next = new;
@@ -37,8 +37,7 @@ void print_list(t_stack *head)
     t_stack *tmp = head;
     while (tmp != NULL)
     {
-        ft_printf("%d -> ", tmp->value);
+        ft_printf("%d\n", tmp->value);
         tmp = tmp->next;
     }
-    puts(" NULL");
 }

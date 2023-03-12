@@ -6,7 +6,7 @@
 #    By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/27 17:52:53 by nsoares-          #+#    #+#              #
-#    Updated: 2023/03/09 20:35:51 by nsoares-         ###   ########.fr        #
+#    Updated: 2023/03/12 01:01:10 by nsoares-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,10 @@ SOURCE_FILES = push_swap.c \
 				check_arg_errors.c \
 				ft_utils_lists.c \
 				init_int_list.c \
-				sort_list_int.c 
+				sort_list_int.c \
+				operations/swap.c operations/push.c operations/rotate.c operations/reverse.c \
+				sort_utils.c 
+				
 
 OBJS_FILES = $(SOURCE_FILES:.c=.o)
 
