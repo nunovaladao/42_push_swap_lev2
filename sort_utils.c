@@ -12,16 +12,16 @@
 
 #include "push_swap.h"
 
-bool stackA_is_sorted(t_stack **stack)
+bool	is_sorted(t_stack **stack)
 {
-    t_stack *tmp;
+	t_stack	*tmp;
 
-    tmp = *stack;
-    while (tmp->next != NULL)
-    {
-        if (tmp->value > tmp->next->value)
-            return (false);
-        tmp = tmp->next;
-    }
-    return (true);
+	tmp = *stack;
+	while (tmp->next != NULL)
+	{
+		if (tmp->value > tmp->next->value)
+			return (false);
+		tmp = tmp->next;
+	}
+	return (true);
 }

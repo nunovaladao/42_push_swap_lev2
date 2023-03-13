@@ -12,25 +12,25 @@
 
 #include "push_swap.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-    t_stack *a = NULL;
-    //t_stack *b = NULL;
-    int i = 1;
-    if (ac == 1)
-        return (1);
-    if (check_args(ac, av) == 1)
-        solve_errors("Error");
-    while (av[i])
-        init_stack(&a, ft_atoi(av[i++]));
-    if (stackA_is_sorted(&a))
-        ft_printf("Stack already sorted!\n");
-    //sort(ac, av);
-    
-    puts("Stack A");
-    print_list(a);
-    /* puts("");
-    puts("Stack B");
-    print_list(b); */
-    return (0);
+	t_stack *a = NULL;
+	//t_stack *b = NULL;
+	int i = 1;
+	if (ac == 1)
+		return (1);
+	if (check_args(ac, av) == 1)
+		solve_errors("Error");
+	while (av[i])
+		init_stack(&a, ft_atoi(av[i++]));
+	if (is_sorted(&a))
+		ft_printf("Stack already sorted!\n");
+	//sort(ac, av);
+
+	printf("Stack A");
+	print_list(a);
+	/* puts("");
+	puts("Stack B");
+	print_list(b); */
+	return (0);
 }

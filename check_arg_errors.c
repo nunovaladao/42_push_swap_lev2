@@ -58,7 +58,7 @@ static int	duplicate_num(int ac, char **av)
 static int	valid_range(int ac, char **av)
 {
 	long long	n;
-	int	i;
+	int			i;
 
 	i = 0;
 	while (i < ac)
