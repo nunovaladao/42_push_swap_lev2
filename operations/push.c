@@ -12,33 +12,31 @@
 
 #include "../push_swap.h"
 
-void push(t_stack **top_b, t_stack **top_a)
+void	push(t_stack **top_b, t_stack **top_a)
 {
-    t_stack *temp;
-    
-    // Check if stack B is empty
-    if (*top_b == NULL)
-        return;
-    
-    // Take the top element from stack B
-    temp = *top_b;
-    *top_b = (*top_b)->next;
-    
-    // Push the element onto stack A
-    temp->next = *top_a;
-    *top_a = temp;
+	t_stack	*temp;
+
+	// Check if stack B is empty
+	if (*top_b == NULL)
+		return ;
+	// Take the top element from stack B
+	temp = *top_b;
+	*top_b = (*top_b)->next;
+	// Push the element onto stack A
+	temp->next = *top_a;
+	*top_a = temp;
 }
 
-void pa(t_stack **stack_a, t_stack **stack_b)
+void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-    push(stack_b, stack_a);
-    ft_printf("pa\n");
+	push(stack_b, stack_a);
+	ft_printf("pa\n");
 }
 
-void pb(t_stack **stack_a, t_stack **stack_b)
+void	pb(t_stack **stack_a, t_stack **stack_b)
 {
-    push(stack_a, stack_b);
-    ft_printf("pb\n");
+	push(stack_a, stack_b);
+	ft_printf("pb\n");
 }
 
 /* int main() 

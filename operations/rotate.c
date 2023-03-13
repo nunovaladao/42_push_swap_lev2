@@ -12,42 +12,40 @@
 
 #include "../push_swap.h"
 
-void rotate(t_stack **stack)
+void	rotate(t_stack **stack)
 {
-    t_stack *head;
-    t_stack *tail;
+	t_stack	*head;
+	t_stack	*tail;
 
-    if (*stack && (*stack)->next)
-    {
-        head = *stack;
-        tail = *stack;
-
-        while (tail->next)
-            tail = tail->next;
-
-        *stack = head->next;
-        tail->next = head;
-        head->next = NULL;
-    }
+	if (*stack && (*stack)->next)
+	{
+		head = *stack;
+		tail = *stack;
+		while (tail->next)
+			tail = tail->next;
+		*stack = head->next;
+		tail->next = head;
+		head->next = NULL;
+	}
 }
 
-void ra(t_stack **stack_a)
+void	ra(t_stack **stack_a)
 {
-    rotate(stack_a);
-    ft_printf("ra\n");
+	rotate(stack_a);
+	ft_printf("ra\n");
 }
 
-void rb(t_stack **stack_b)
+void	rb(t_stack **stack_b)
 {
-    rotate(stack_b);
-    ft_printf("rb\n");
+	rotate(stack_b);
+	ft_printf("rb\n");
 }
 
-void rr(t_stack **stack_a, t_stack **stack_b)
+void	rr(t_stack **stack_a, t_stack **stack_b)
 {
-    rotate(stack_a);
-    rotate(stack_b);
-    ft_printf("rr\n");
+	rotate(stack_a);
+	rotate(stack_b);
+	ft_printf("rr\n");
 }
 
 /* int main() 
@@ -89,4 +87,4 @@ void rr(t_stack **stack_a, t_stack **stack_b)
     } 
     
     return 0;
-} */ 
+} */
