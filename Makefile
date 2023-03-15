@@ -6,7 +6,7 @@
 #    By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/27 17:52:53 by nsoares-          #+#    #+#              #
-#    Updated: 2023/03/13 19:39:06 by nsoares-         ###   ########.fr        #
+#    Updated: 2023/03/15 13:34:21 by nsoares-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,12 @@ LIBFT = ./libft/libft.a
 # _________SOURCES____________
 
 SOURCE_FILES = push_swap.c \
-				check_arg_errors.c \
-				ft_utils_lists.c \
-				init_stack.c \
+				errors/check_arg_errors.c \
+				stack/init_stack.c \
 				sort_list_int.c \
 				operations/swap.c operations/push.c operations/rotate.c operations/reverse.c \
-				sort_utils.c \
-				sort_small.c 
+				sort/sort_utils.c \
+				sort/sort_small.c 
 				
 
 OBJS_FILES = $(SOURCE_FILES:.c=.o)
