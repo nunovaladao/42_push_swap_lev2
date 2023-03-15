@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:44:27 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/12 01:16:26 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/14 16:48:05 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,14 @@ void	print_list(t_stack *head);
 // Init list/stack
 void	init_stack(t_stack **head, int number);
 
-// Sort
+// Sort_utils
 int	sort(int ac, char **av);
 bool	is_sorted(t_stack **stack);
+int stack_size(t_stack **stack);
+
+// Sort
+void sort_small(t_stack **stack_a, t_stack **stack_b);
+void sort_2(t_stack **stack);
+void sort_3(t_stack **stack);
 
 # endif

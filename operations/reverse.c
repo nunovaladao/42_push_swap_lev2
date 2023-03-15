@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 13:41:16 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/11 16:10:33 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/14 15:59:14 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,20 +35,20 @@ void	reverse_rotate(t_stack **stack)
 void	rra(t_stack **stack_a)
 {
 	reverse_rotate(stack_a);
-	ft_printf("rra\n");
+	printf("rra\n");
 }
 
 void	rrb(t_stack **stack_b)
 {
 	reverse_rotate(stack_b);
-	ft_printf("rrb\n");
+	printf("rrb\n");
 }
 
 void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	reverse_rotate(stack_a);
 	reverse_rotate(stack_b);
-	ft_printf("rrr\n");
+	printf("rrr\n");
 }
 
 /* int main() 
@@ -58,7 +58,7 @@ void	rrr(t_stack **stack_a, t_stack **stack_b)
     
     // Push some elements onto stack A
     t_stack *a_elem1 = malloc(sizeof(t_stack));
-    a_elem1->value = 3;
+    a_elem1->value = 1;
     a_elem1->next = NULL;
     top_a = a_elem1;
 
@@ -68,7 +68,7 @@ void	rrr(t_stack **stack_a, t_stack **stack_b)
     top_a = a_elem2;
 
     t_stack *a_elem3 = malloc(sizeof(t_stack));
-    a_elem3->value = 1;
+    a_elem3->value = 3;
     a_elem3->next = top_a;
     top_a = a_elem3;
     
@@ -80,14 +80,13 @@ void	rrr(t_stack **stack_a, t_stack **stack_b)
     }
     
     // Move the top element of B to A
-    reverse_rotate(&top_a);
+    rra(&top_a);
     
     // Print the updated stacks
     printf("Updated stack:\n");
     printf("Stack A:\n");
-    for (t_stack *p = top_a; p != NULL; p = p->next) {
+    for (t_stack *p = top_a; p != NULL; p = p->next)
         printf("%d\n", p->value);
-    } 
     
     return 0;
-}  */
+} */ 
