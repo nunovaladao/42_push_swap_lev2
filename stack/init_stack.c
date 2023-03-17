@@ -6,13 +6,13 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 18:42:11 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/15 14:27:10 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/15 14:57:59 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void init_stack(t_stack **stack, int number)
+static void create_stack(t_stack **stack, int number)
 {
     t_stack *new = malloc(sizeof(t_stack));
     if (new == NULL)
@@ -32,12 +32,13 @@ void init_stack(t_stack **stack, int number)
     curr->next = new;
 }
 
-void print_list(t_stack *head)
+void init_stack_a(char **av, t_stack **stack_a)
 {
-    t_stack *tmp = head;
-    while (tmp != NULL)
-    {
-        ft_printf("%d\n", tmp->value);
-        tmp = tmp->next;
-    }
+    int n;
+
+    n = 1;
+    while (av[n])
+        create_stack(stack_a, ft_atoi(av[n++]));
+    if (is_sorted(stack_a))
+        exit(EXIT_SUCCESS);
 }

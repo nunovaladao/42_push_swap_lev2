@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:44:27 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/14 16:48:05 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/17 13:49:26 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,21 @@ void	rra(t_stack **stack_a);
 void	rrb(t_stack **stack_b);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
 
-// List utils
-t_stack	*ft_lstnew_push(int value);
-t_stack	*ft_lstlast_push(t_stack *lst);
-void	print_list(t_stack *head);
-
-// Init list/stack
-void	init_stack(t_stack **head, int number);
+// Init stack
+void init_stack_a(char **av, t_stack **stack_a);
 
 // Sort_utils
 int	sort(int ac, char **av);
 bool	is_sorted(t_stack **stack);
 int stack_size(t_stack **stack);
+void	print_list(t_stack *stack);
+int small_nbr(t_stack **stack);
+int position_small_nbr(t_stack **stack, int nb);
 
 // Sort
 void sort_small(t_stack **stack_a, t_stack **stack_b);
-void sort_2(t_stack **stack);
-void sort_3(t_stack **stack);
+
+// Free
+void free_stacks(t_stack **stack_a, t_stack **stack_b);
 
 # endif

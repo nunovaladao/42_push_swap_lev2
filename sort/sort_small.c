@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 17:09:34 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/15 14:27:20 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/17 13:17:21 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,54 @@ void sort_3(t_stack **stack)
         rra(stack);
 }
 
+void sort_4(t_stack **stack_a, t_stack **stack_b)
+{
+    int ps_small_nbr;
+    
+    if (is_sorted(stack_a))
+		return ;
+    ps_small_nbr = position_small_nbr(stack_a, small_nbr(stack_a));
+    if (ps_small_nbr == 1)
+        ra(stack_a);
+    else if (ps_small_nbr == 2)
+    {
+        ra(stack_a);
+        ra(stack_a);
+    }
+    else if (ps_small_nbr == 3)
+        rra(stack_a);
+    if (is_sorted(stack_a))
+		return ;
+	pb(stack_a, stack_b);
+	sort_3(stack_a);
+	pa(stack_a, stack_b);
+}
+
 void sort_5(t_stack **stack_a, t_stack **stack_b)
 {
-    pb(stack_a, stack_b);
-    pb(stack_a, stack_b);
-    sort_3(stack_a);
-    pa(stack_a, stack_b);
-    pa(stack_a, stack_b);
-    pa(stack_a, stack_b);
-}
+    int ps_small_nbr;
+
+    ps_small_nbr = position_small_nbr(stack_a, small_nbr(stack_a));
+    if (ps_small_nbr == 1)
+        ra(stack_a);
+    else if (ps_small_nbr == 2)
+    {
+        ra(stack_a);
+        ra(stack_a);
+    }
+    else if (ps_small_nbr == 3)
+    {
+        rra(stack_a);
+        rra(stack_a);
+    }
+    else if (ps_small_nbr == 4)
+        rra(stack_a);
+    if (is_sorted(stack_a))
+		return;
+	pb(stack_a, stack_b);
+	sort_4(stack_a, stack_b);
+	pa(stack_a, stack_b);
+} 
 
 void sort_small(t_stack **stack_a, t_stack **stack_b)
 {
@@ -61,7 +100,8 @@ void sort_small(t_stack **stack_a, t_stack **stack_b)
         sort_2(stack_a);
     if (stack_size(stack_a) == 3)
         sort_3(stack_a);
-    //if (stack_size(stack_a) == 4)  
+    if (stack_size(stack_a) == 4)
+        sort_4(stack_a, stack_b);
     if (stack_size(stack_a) == 5)
         sort_5(stack_a, stack_b);
 }
