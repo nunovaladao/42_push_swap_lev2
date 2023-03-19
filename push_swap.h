@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:44:27 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/18 20:48:33 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/19 23:49:27 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void	rrr(t_stack **stack_a, t_stack **stack_b);
 void init_stack_a(char **av, t_stack **stack_a);
 
 // Sort_utils
-int	sort(int ac, char **av);
 bool	is_sorted(t_stack **stack);
 int stack_size(t_stack **stack);
 void	print_list(t_stack *stack);
@@ -56,9 +55,9 @@ int position_small_nbr(t_stack **stack, int nb);
 
 // Sort
 void sort_small(t_stack **stack_a, t_stack **stack_b);
+void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 
 // Free
 void free_stacks(t_stack **stack_a, t_stack **stack_b);
-void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 
 # endif
