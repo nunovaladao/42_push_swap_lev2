@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:43:40 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/17 13:58:44 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/19 00:23:42 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	main(int ac, char **av)
 	init_stack_a(av, &stack_a);
 	if (stack_size(&stack_a) <= 5)
 		sort_small(&stack_a, &stack_b);
+	else
+		radix_sort(&stack_a, &stack_b);
 	
 	puts("");
 	ft_printf("Stack A:\n");
