@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:44:27 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/19 23:49:27 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/21 19:43:31 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct s_stack
 {
 	int	value;
+	int	flag;
 	struct s_stack	*next;
 }			t_stack;
 
@@ -52,6 +53,7 @@ int stack_size(t_stack **stack);
 void	print_list(t_stack *stack);
 int small_nbr(t_stack **stack);
 int position_small_nbr(t_stack **stack, int nb);
+void get_all_positions(t_stack **stack_a);
 
 // Sort
 void sort_small(t_stack **stack_a, t_stack **stack_b);
