@@ -12,11 +12,11 @@
 
 #include "../push_swap.h"
 
-static int bigger_num_stack_a(t_stack **stack_a)
+static int	bigger_num_stack_a(t_stack **stack_a)
 {
-	t_stack *tmp;
-	int n_big;
-	int max_bits;
+	t_stack	*tmp;
+	int		n_big;
+	int		max_bits;
 
 	max_bits = 0;
 	tmp = *stack_a;
@@ -34,11 +34,11 @@ static int bigger_num_stack_a(t_stack **stack_a)
 
 void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 {
-	int size;
-	int i;
-	int j;
-	int nr_bits;
-	
+	int	size;
+	int	i;
+	int	j;
+	int	nr_bits;
+
 	i = -1;
 	get_all_positions(stack_a);
 	size = stack_size(stack_a);
@@ -50,7 +50,7 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 		{
 			if ((((*stack_a)->value >> i) & 0b00000001) == 0)
 				pb(stack_a, stack_b);
-			else 
+			else
 				ra(stack_a);
 		}
 		while (stack_size(stack_b) > 0)

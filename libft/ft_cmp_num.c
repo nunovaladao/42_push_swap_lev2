@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int ft_cmp_num(int n1, int n2)
+int	ft_cmp_num(int n1, int n2)
 {
-    if (n1 < n2)
-        return (1);
-    else if (n2 < n1)
-        return (-1);
-    else
-        return (0);    
+	if (n1 < n2)
+		return (1);
+	else if (n2 < n1)
+		return (-1);
+	else
+		return (0);
 }

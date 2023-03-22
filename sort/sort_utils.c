@@ -26,9 +26,9 @@ bool	is_sorted(t_stack **stack)
 	return (true);
 }
 
-int stack_size(t_stack **stack)
+int	stack_size(t_stack **stack)
 {
-	int	i;
+	int		i;
 	t_stack	*tmp;
 
 	i = 0;
@@ -41,39 +41,45 @@ int stack_size(t_stack **stack)
 	return (i);
 }
 
-void print_list(t_stack *stack)
+void	print_list(t_stack *stack)
 {
-	t_stack *tmp = stack;
-    while (tmp != NULL)
-    {
-        ft_printf("%d\n", tmp->value);
-        tmp = tmp->next;
-    }
+	t_stack	*tmp;
+
+	tmp = stack;
+	while (tmp != NULL)
+	{
+		ft_printf("%d\n", tmp->value);
+		tmp = tmp->next;
+	}
 }
 
-int small_nbr(t_stack **stack)
+int	small_nbr(t_stack **stack)
 {
-    int nb = (*stack)->value;
+	int		nb;
+	t_stack	*tmp;
 
-	t_stack *tmp = *stack;
-    while (tmp->next)
-    {
-        if (nb > tmp->next->value)
-            nb = tmp->next->value;
-        tmp = tmp->next;
-    }
-    return (nb);
+	tmp = *stack;
+	nb = (*stack)->value;
+	while (tmp->next)
+	{
+		if (nb > tmp->next->value)
+			nb = tmp->next->value;
+		tmp = tmp->next;
+	}
+	return (nb);
 }
 
-int position_small_nbr(t_stack **stack, int nb)
+int	position_small_nbr(t_stack **stack, int nb)
 {
-	int distance = 0;
+	int		distance;
+	t_stack	*tmp;
 
-	t_stack *tmp = *stack;
+	distance = 0;
+	tmp = *stack;
 	while (tmp)
 	{
-		if (tmp->value == nb) 
-            break;
+		if (tmp->value == nb)
+			break ;
 		distance++;
 		tmp = tmp->next;
 	}

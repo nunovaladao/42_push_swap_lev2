@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-long long	ft_atoll(char *nptr)
+long	ft_atoll(char *nptr)
 {
-	long long	s;
-	long long	res;
-	int	i;
+	long	s;
+	long	res;
+	int		i;
 
 	i = 0;
 	res = 0;

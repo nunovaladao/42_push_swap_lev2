@@ -12,33 +12,34 @@
 
 #include "../push_swap.h"
 
-static void create_stack(t_stack **stack, int number)
+static void	create_stack(t_stack **stack, int number)
 {
-    t_stack *new = malloc(sizeof(t_stack));
-    if (new == NULL)
-        exit(1);
-    new->value = number;
-    new->next = NULL;
-    
-    if (*stack == NULL)
-    {
-        *stack = new;
-        return;
-    }
-    
-    t_stack *curr = *stack;
-    while (curr->next != NULL)
-        curr = curr->next;
-    curr->next = new;
+	t_stack	*new;
+	t_stack	*curr;
+
+	new = malloc(sizeof(t_stack));
+	if (new == NULL)
+		exit(1);
+	new->value = number;
+	new->next = NULL;
+	if (*stack == NULL)
+	{
+		*stack = new;
+		return ;
+	}
+	curr = *stack;
+	while (curr->next != NULL)
+		curr = curr->next;
+	curr->next = new;
 }
 
-void init_stack_a(char **av, t_stack **stack_a)
+void	init_stack_a(char **av, t_stack **stack_a)
 {
-    int n;
+	int	n;
 
-    n = 1;
-    while (av[n])
-        create_stack(stack_a, ft_atoi(av[n++]));
-    if (is_sorted(stack_a))
-        exit(EXIT_SUCCESS);
+	n = 1;
+	while (av[n])
+		create_stack(stack_a, ft_atoi(av[n++]));
+	if (is_sorted(stack_a))
+		exit(EXIT_SUCCESS);
 }
