@@ -1,13 +1,29 @@
+
 # Push_Swap 3️⃣1️⃣2️⃣ -> 1️⃣2️⃣3️⃣
 
 ## Introduction
-This project is about sorting data on a stack, with a limited set of instructions, and the goal to sort the stack with the smallest number of instructions. To succeed, we must find the best compromise between the number of instructions and the processing time. In this project, we will also have to handle errors and learn how to write optimized sorting algorithms.
+This project is about **sorting data on a stack**, with a limited set of instructions, and the goal to sort the stack with the **smallest number of instructions**. To succeed, we must find the best compromise between the number of instructions and the processing time. In this project, we will also have to handle errors and learn how to write optimized sorting algorithms.
+
+## GRADE PROJECT ✅
+- 84/100 📋
+- [**Subject**](https://github.com/nunovaladao/42_push_swap_lev2/blob/main/extras/en.subject.pdf) 
 
 ## Installation
-1. Clone the repository via `git clone https://github.com/<username>/push_swap.git`
-2. Move into the repository directory: `cd push_swap`
-3. Compile the program by running `make`
-4. The two programs, `checker` and `push_swap`, will be compiled to the `./checker` and `./push_swap` files.
+
+1. Clone the repository via
+```bash
+https://github.com/nunovaladao/42_push_swap_lev2.git
+```
+
+2. Move into the repository directory:
+```bash
+cd 42_push_swap_lev2
+```
+
+3. Compile the program by running 
+```bash
+make
+```
 
 ## Usage
 ### Push_swap
@@ -21,18 +37,6 @@ Example output:
 ```bash
 ra
 sa
-```
-
-### Checker
-`checker` is a program that reads instructions from standard input and checks whether they successfully sort the list of integers passed as arguments.
-
-Example usage:
-```bash
-./push_swap 3 2 1 | ./checker 3 2 1
-```
-Example output:
-```bash
-OK
 ```
 
 ## Rules
@@ -51,13 +55,48 @@ The list of integers to sort is called `Stack A`. There can be a second stack, `
 - **rrr**: rra and rrb at the same time.
 
 ## Algorithm
-There are various sorting algorithms that can be applied to solve this problem, each with its own trade-offs in terms of time and instruction count. Two such algorithms that we can use are **quicksort** and **insertion sort**. 
+There are various sorting algorithms that can be applied to solve this problem, each with its own trade-offs in terms of time and instruction count. Three such algorithms that we can use are: **radixsort**, **quicksort** and **insertion sort**. 
 
 **Quicksort**: In quick sort, we choose a pivot element and divide the array into two partitions such that all elements in the left partition are smaller than the pivot and all elements in the right partition are greater than the pivot. This process is then applied recursively on the left and right partitions until the whole array is sorted. The pivot element can be chosen randomly from the array or we can choose the middle element as the pivot.
 
 **Insertion sort**: Insertion sort is a simple sorting algorithm where the sorted array is built one element at a time. We start with an initially empty sorted list and insert elements from the input list into this sorted list in the correct order.
 
-We will implement both of these algorithms and compare their performance to determine which to use when sorting the stack. We will then optimize the chosen algorithm, by taking advantage of specific stack properties, such as using the two stacks to drive the algorithm, reducing the number of instructions used.
+### ***I use radix_sort:*** 
+
+**Radix sort**: is a sorting algorithm that sorts elements by grouping them according to their digits, from right to left or left to right. It starts by sorting the elements based on their least significant digit, then the second least significant digit, and so on until all digits have been considered. Radix sort is useful when the number of digits in the elements is small compared to the number of elements.
+##
+For this project I used the radix_sort algorithm as it was the one I found easiest to understand.
+But to use radix in this project I had to make some changes to the original algorithm:
+- As the algorithm does not sort negative numbers, I have to adapt the positions of the numbers and their respective order from largest to smallest, for example:
+
+Example:
+```bash
+50 100 78 -1
+```
+Positions numbers:
+```bash
+ 1  3  2  0
+```
+
+- Then I transform the positions of the numbers into binary and do bitwise operations to order them from the least significant bit to the most significant bit, as in the original algorithm.
+
+Positions numbers (binary):
+```bash
+ 001  011  010  000
+```
+- And instead of using the **9 boxes** as in the original algorithm, I use only **2 boxes**, in which `stack_a` will receive `1` and `stack_b` will receive `0`. Then the sort is done with the binary operations and the instructions that are given.
 
 ## Conclusion
 In conclusion, Push_Swap is a challenging project that requires knowledge of data structures, algorithms, and optimization techniques. By applying different sorting algorithms and optimizing them, we can sort the stack with the smallest number of instructions.
+
+## Useful links
+
+- https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
+- https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a
+- https://push_swap.simple.ink
+
+## Note:
+
+[**Coding Norm**](https://github.com/nunovaladao/42_push_swap_lev2/blob/main/extras/en_norm.pdf) - All students must follow the 42 code writing standards. This standard is applied to many projects in the course.
+##
+Nuno Valadão | nsoares-@student.42porto.com
