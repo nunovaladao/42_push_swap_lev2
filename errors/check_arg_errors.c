@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 13:47:56 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/08 15:42:43 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/22 19:35:33 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ static int	all_args_are_numbers(int ac, char **av)
 				return (1);
 			j++;
 		}
-		j = 0;
 		i++;
 	}
 	return (0);

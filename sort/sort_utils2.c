@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 23:03:05 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/21 20:57:19 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/22 22:52:01 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 static void	get_position(t_stack **stack_a)
 {
 	static int		size;
-	int		n_min;
-	t_stack	*tmp;
+	int				n_min;
+	t_stack			*tmp;
 
 	n_min = INT_MAX;
 	tmp = *stack_a;

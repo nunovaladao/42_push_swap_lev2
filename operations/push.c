@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 14:18:12 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/11 12:39:46 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/22 21:23:58 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 void	push(t_stack **top_b, t_stack **top_a)
 {
-	t_stack	*temp;
+	t_stack	*tmp;
 
-	// Check if stack B is empty
 	if (*top_b == NULL)
 		return ;
-	// Take the top element from stack B
-	temp = *top_b;
+	tmp = *top_b;
 	*top_b = (*top_b)->next;
-	// Push the element onto stack A
-	temp->next = *top_a;
-	*top_a = temp;
+	tmp->next = *top_a;
+	*top_a = tmp;
 }
 
 void	pa(t_stack **stack_a, t_stack **stack_b)

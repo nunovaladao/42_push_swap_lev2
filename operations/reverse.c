@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 13:41:16 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/14 15:59:14 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/22 22:51:22 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,4 @@ void	rrr(t_stack **stack_a, t_stack **stack_b)
         printf("%d\n", p->value);
     
     return 0;
-} */ 
+} */
