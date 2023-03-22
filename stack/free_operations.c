@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 13:38:48 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/22 13:46:51 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/22 15:55:32 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 void	free_stack(t_stack **stack)
 {
-	t_stack	*head;
+	t_stack	*tmp;
 
-	head = *stack;
-	while (head)
+	if (stack)
 	{
-		head = head->next;
-		free(head);
+		while (*stack)
+		{
+			tmp = *stack;
+			*stack = (*stack)->next;
+			free(tmp);
+		}
+		*stack = NULL;
 	}
-	free(stack);
 }
