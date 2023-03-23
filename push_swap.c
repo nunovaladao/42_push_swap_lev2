@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:43:40 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/22 22:53:52 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/23 16:48:53 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ int	main(int ac, char **av)
 		sort_small(&stack_a, &stack_b);
 	else
 		radix_sort(&stack_a, &stack_b);
+	free_stack(&stack_a);
+	free_stack(&stack_b);
+	return (0);
+}
 	/* ft_printf("\n");
 	ft_printf("Stack A:\n");
 	print_list(stack_a);
 	ft_printf("\n");
 	ft_printf("Stack B:\n");
 	print_list(stack_b); */
-	free_stack(&stack_a);
-	free_stack(&stack_b);
-	return (0);
-}
