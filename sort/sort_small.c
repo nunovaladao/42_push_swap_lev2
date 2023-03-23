@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 17:09:34 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/20 15:43:56 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/23 01:00:15 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,6 @@ void	sort_4(t_stack **stack_a, t_stack **stack_b)
 {
 	int	ps_small_nbr;
 
-	if (is_sorted(stack_a))
-		return ;
 	ps_small_nbr = position_small_nbr(stack_a, small_nbr(stack_a));
 	if (ps_small_nbr == 1)
 		ra(stack_a);
