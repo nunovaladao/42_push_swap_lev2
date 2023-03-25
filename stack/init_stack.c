@@ -6,7 +6,7 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 18:42:11 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/23 15:48:13 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/25 20:41:12 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	create_stack(t_stack **stack, int number)
 
 	new = malloc(sizeof(t_stack));
 	if (new == NULL)
-		exit(1);
+		return ;
 	new->value = number;
 	new->next = NULL;
 	if (*stack == NULL)
@@ -41,5 +41,8 @@ void	init_stack_a(char **av, t_stack **stack_a)
 	while (av[n])
 		create_stack(stack_a, ft_atoi(av[n++]));
 	if (is_sorted(stack_a))
+	{
+		free_stack(stack_a);
 		exit(EXIT_SUCCESS);
+	}
 }

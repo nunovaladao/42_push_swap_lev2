@@ -6,11 +6,24 @@
 /*   By: nsoares- <nsoares-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 23:03:05 by nsoares-          #+#    #+#             */
-/*   Updated: 2023/03/22 22:52:01 by nsoares-         ###   ########.fr       */
+/*   Updated: 2023/03/25 20:25:36 by nsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+static void	flag_inicialize(t_stack **stack_a)
+{
+	t_stack	*tmp;
+
+	tmp = *stack_a;
+	while (*stack_a)
+	{
+		(*stack_a)->flag = 0;
+		*stack_a = (*stack_a)->next;
+	}
+	*stack_a = tmp;
+}
 
 static void	get_position(t_stack **stack_a)
 {
@@ -45,6 +58,7 @@ void	get_all_positions(t_stack **stack_a)
 {
 	int	size;
 
+	flag_inicialize(stack_a);
 	size = -1;
 	while (++size < stack_size(stack_a))
 		get_position(stack_a);
