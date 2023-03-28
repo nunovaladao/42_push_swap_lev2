@@ -12,7 +12,7 @@ This project is about **sorting data on a stack**, with a limited set of instruc
 
 1. Clone the repository via
 ```bash
-https://github.com/nunovaladao/42_push_swap_lev2.git
+git clone https://github.com/nunovaladao/42_push_swap_lev2.git
 ```
 
 2. Move into the repository directory:
