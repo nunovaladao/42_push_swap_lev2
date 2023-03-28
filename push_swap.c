@@ -28,13 +28,13 @@ int	main(int ac, char **av)
 		sort_small(&stack_a, &stack_b);
 	else
 		radix_sort(&stack_a, &stack_b);
-	free_stack(&stack_a);
-	free_stack(&stack_b);
-	return (0);
-}
 	/* ft_printf("\n");
 	ft_printf("Stack A:\n");
 	print_list(stack_a);
 	ft_printf("\n");
 	ft_printf("Stack B:\n");
 	print_list(stack_b); */
+	free_stack(&stack_a);
+	free_stack(&stack_b);
+	return (0);
+}
